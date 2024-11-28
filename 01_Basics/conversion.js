@@ -29,8 +29,8 @@ let booleanIsLogged = Boolean(isLoggedIn)
 console.log(booleanIsLogged)
 console.log(typeof(booleanIsLogged))
 
-console.log(+true)
-console.log(+"")
+console.log(+true) //1
+console.log(+"")  //0
 
 
 /** comparison */
