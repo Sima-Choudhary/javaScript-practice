@@ -1,7 +1,7 @@
 const accountId = 18723887
 let accountEmail = "hitesh@google.com"
 var accountPassword = "12345"
-accountCity = "Jaipur"
+accountCity = "Jaipur" //it is treated as global object.if this is done while using "use strick" thows "RefferenceError"
 let accountState;
 
 // accountId = 2983947 // changes not allowed
