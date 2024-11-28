@@ -10,6 +10,9 @@
 //Sysmbol => Uniqueness
 //boolean
 
+/* Reference(Non -Primitive*/
+//Array, Objects, Functions
+
 const id = Symbol("123")
 const anotherId = Symbol("123")
 console.log(id == anotherId) //evenif we are passing same value symbol returns unique value
