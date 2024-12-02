@@ -23,3 +23,17 @@ function handleObject(anyobject){
 }
 
 console.log(handleObject({username:"sima", price:2983}))
+
+/********************************************scope of function with and without variable *************************/
+console.log(addOne(3))
+
+function addOne(num){
+    return num+1;
+}
+
+//console.log(addTwo(4))    /**Cannot acces the variable before initialization ******/
+const addTwo = function(num){
+    return num+2
+}
+
+
