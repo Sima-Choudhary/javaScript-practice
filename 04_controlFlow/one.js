@@ -37,7 +37,7 @@ if(Object.keys(user).length === 0){}
 let val = 5 ?? 10
 val = null ?? 15
 val = undefined ?? 20 ??30      //takes the first valid value
-console.log(val)
+// console.log(val)
 
 //Trunary operatior
 console.log(100 >= 80 ? "true" : "false")

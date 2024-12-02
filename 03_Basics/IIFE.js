@@ -8,7 +8,7 @@ console.log(`connected to db`)
     console.log(`connected to db ,${name}`)
     })("sima");
     
-    
+console.log()    
 //javaScript is single threaded 
 
 /**JavaScript  execution context 
