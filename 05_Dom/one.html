@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: azure;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div class="bg-black">
+        <h1 id="title" class="heading">DOM Learning with Hitesh Choudhary</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, maiores.</p>
+        
+    </div>
+</body>
+</html>
+
+<!-- 
+break down
+1.window
+    1.head
+        -> meta
+            ->attritute
+        -> title
+            ->text node
+    2.body
+        ->div
+            ->h1
+                ->attribute
+                ->text node
+            ->p
+                ->attribute
+                ->text node 
+                
+Some Dom manipulation in browser
+
+console.log(window)     //gives all atribute and funtion of window object
+console.log(window.document)  Or console.log(document)    //this gives less details about document(just html collection) 
+console.dir(document)      oR console.dir(window.document) // gives entire details as we get in window for document
+
+console.log(document.links)       //gives html collection
+console.log(document.links[1])       //can be accessed like array but cant apply high order loops on them
+document.getElementById("firstHeading")     //<h1 id=​"firstHeading" class=​"firstHeading mw-first-heading">​…​</h1>​
+document.getElementById("firstHeading").innerHtml ="<h1>Sima choundhary</h1>"       //'<h1>Sima choundhary</h1>'
+
+
+-->
+
+//day 2
+<!-- 
+document.getElementById("title")
+document.getElementById("title").id
+'title'
+document.getElementById("title").class
+undefined
+document.getElementById("title").className
+'heading'
+document.getElementById("title").attribute
+undefined
+document.getElementById("title").getAttribute()
+VM1040:1 Uncaught TypeError: Failed to execute 'getAttribute' on 'Element': 1 argument required, but only 0 present.
+    at <anonymous>:1:34
+document.getElementById("title").getAttribute("id")
+'title'
+
+document.getElementById("title").setAttribute("class","test heading")
+const abc= document.getElementById("title")
+abc.style.backgroundColor = "green"
+abc.style.borderRadius = "15px"
+
+ -->
