@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai Aur Code</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+    <div class = "parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <!-- //comment -->
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+
+    </div>
+</body>
+<script>
+    const parent= document.querySelector('.parent')
+    console.log(parent)                 //returns fist element with that class
+    console.log(parent.children)        //return HTMLCollection of all child element
+
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerText);    
+    }
+    console.log(parent.firstElementChild)
+    console.log(parent.lastElementChild)
+
+    const child = document.querySelector('.day')
+    console.log(parent.firstElementChild)
+    console.log(child.parentElement)
+    console.log(child.nextElementSibling)
+
+// NodeList
+console.log("Node: ",parent.childNodes)  //return total div + enter(only fist line enter) as text+comments
+
+
+
+</script>
+</html>

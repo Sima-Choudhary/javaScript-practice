@@ -13,9 +13,18 @@
 </head>
 <body class="bg-black">
     <div class="bg-black">
-        <h1 id="title" class="heading">DOM Learning with Hitesh Choudhary</h1>
+        <h1 id="title" class="heading">DOM Learning with <span style="display: none;"> test </span>Hitesh Choudhary</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, maiores.</p>
-        
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum veniam illum molestias quam ipsum. Quis explicabo ipsam libero maiores quia.</h2>
+        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, quos.</h2>
+        <input type = "password">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+        </ul>
     </div>
 </body>
 </html>
@@ -51,7 +60,8 @@ document.getElementById("firstHeading").innerHtml ="<h1>Sima choundhary</h1>"   
 
 -->
 
-//day 2
+
+
 <!-- 
 document.getElementById("title")
 document.getElementById("title").id
@@ -73,4 +83,33 @@ const abc= document.getElementById("title")
 abc.style.backgroundColor = "green"
 abc.style.borderRadius = "15px"
 
+
+title.innerHTML     //this returns the entire thing present in this tag(includeing other tags)
+title.textContent   //htis ignore the styling of the text
+title.innerText     //this respect the styying of the text
+
+document.querySelector('h2')
+document.querySelectorAll('h2')
+document.querySelector('#title')
+document.querySelector('.heading')
+document.querySelector('input[type="password"]')
+document.querySelector(`input[type="password"]`)
+document.querySelector(`p:first-child`)
+const myul = document.querySelector('ul')
+myul.querySelector(`li`)
+const turnGreen = myul.querySelector(`li`)
+turnGreen.style.backgroundColor="blue"
+turnGreen.innerHTML = "hello"
+
+
+const temp = document.querySelectorAll('li')
+temp[0].style.color= "red"
+temp.forEach( (i) => {
+    i.style.color = "green"
+})
+
+
+
+const newcol  = document.getElementsByClassName(`.list-item`)       //returns HTMLCollection
+Array.from(newcol)
  -->
