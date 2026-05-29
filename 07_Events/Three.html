@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async | events</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <h1>Chai aur code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayDate = function(str){
+        console.log(str,Date.now());
+    }
+    
+    let intervalId =0;
+    document.querySelector("#start").addEventListener("click",  function(){
+        intervalId = setInterval(sayDate,1000,"Hi")
+    })
+
+    document.querySelector("#stop").addEventListener("click",  function(){
+        clearInterval(intervalId)
+    })
+
+</script>
+</html>

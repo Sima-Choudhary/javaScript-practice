@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+
+    document.getElementById("owl").onclick = function(){   //this does not provides propagation means less features
+        //alert("owl is clicked");
+    }
+
+    //before addEventListener we used
+    //attachEvent()
+    //jQuery - on
+
+    document.getElementById("river").addEventListener('click',function(e){
+        //alert("river is clicked")
+        console.log(e)
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+    },false)
+
+    /**Event propagation
+     * -> event Bubbling :bottom to top element 
+     * -> event Capturing : top to bottom element
+     * false means bubble changes
+     * **/
+    
+     document.getElementById("images").addEventListener("click", function(e){
+        console.log("images list is clicked")
+     },false)
+
+     document.getElementById("owl").addEventListener("click",function(e){
+        console.log("owl is clicked")
+        e.stopPropagation();
+     },false)
+
+
+     document.getElementById("google").addEventListener("click", function(e){
+        console.log("Google link is clicked")
+        e.preventDefault();
+        e.stopPropagation(); 
+     },false)
+
+
+     // How to delete an element from list just on click
+     document.querySelector("#images").addEventListener("click", function(e){
+        console.log(e.target.parentNode);
+
+        if(e.target.tagName === 'IMG'){
+            let removeIt = e.target.parentNode
+            removeIt.remove();
+            //removeIt.parentNode.removeChild(removeIt);
+        }
+        
+     })
+
+</script>
+</html>
